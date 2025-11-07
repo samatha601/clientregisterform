@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client side validation</title>
+</head>
+<body style="text-align: center;">
+    <h1>client form</h1><br><br>
+    <form onsubmit="return validate()">
+    name:<input type="text" id="name" ><br><br>
+    email:<input type="email" id="email"><br><br>
+    password:<input type="password" id="pass"><br><br>
+    confirmpass:<input type="password"id="cpass"><br><br>
+    <input type="submit" value="register">
+    </form>
+    <script>
+        function validate()
+        {
+            let n=document.getElementById("name").value.trim();
+            let e=document.getElementById("email").value.trim();
+            let p=document.getElementById("pass").value;
+            let c=document.getElementById("cpass").value;
+            if(!n||!e||!p)
+        {
+            alert("fill all fields");
+        }
+        if(!e.includes("@"))
+        {
+            alert("must consists");
+            return false;
+        }
+        if(p.length<6)
+        {
+            alert("password should be greater than 6");
+            return false;
+        }
+        if(p!=c)
+        {
+            alert("not matched");
+        }
+        alert("registration sucessful");
+        return true;
+        }
+    </script>
+</body>
+</html>
