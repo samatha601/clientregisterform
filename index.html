@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Event Registration</title>
+<style>
+  body {
+    background: purple;
+    text-align: center;
+  }
+  form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+<h2>Event Registration</h2>
+<form>
+  <input type="text" name="name" placeholder="Full Name" required><br>
+  <input type="email" name="email" placeholder="Email" required><br>
+  <input type="tel" name="phone" placeholder="Phone" required><br>
+  <select name="event" required>
+    <option value="">Select Event</option>
+    <option>Workshop</option>
+    <option>Seminar</option>
+    <option>Hackathon</option>
+  </select><br>
+  <input type="submit" value="Register">
+</form>
+</body>
+</html>
