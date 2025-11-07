@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>
+<h1>registeration form</h1>
+</title>
+</head>
+<body style="text-align:center">
+<form onsubmit="validateform(event)>
+<input type="text"id="name"placeholder="name">
+<input type="email" id="email" placeholder="name">
+<input type="password" id="pass" placeholder="password">
+</body>
+<script>
+function validateform(e)
+{
+ let name=document.getElementById("name").value;
+            let email=document.getElementById("email").value;
+            let pass=document.getElementById("pass").value;
+            if(name&&email&&pass)
+        {
+            alert("register successful");
+        }
+        }
+    </script>
+    
+</body>
+</html>
+ 
